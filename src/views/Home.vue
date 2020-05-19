@@ -6,6 +6,12 @@
         <!-- home about -->
         <div class="main" id="home">
 
+            <!-- weixin 弹出框的处理, 具体调用在 HomeNav.vue 组件中-->
+            <div id="showweixin" class="white_content">
+                <img src='../assets/images/weixin.jpg' />
+            </div>
+            <div id="claosweixin" class="black_overlay" v-on:click="closeweixin" />
+
             <!-- header -->
             <homeheader></homeheader>
 
@@ -59,6 +65,13 @@ export default {
         homecontact,
         homeheader,
         homefooter
+    },
+    // weixin弹出框的close处理
+    methods: {
+        closeweixin: function () {
+            document.getElementById('showweixin').style.display = 'none'
+            document.getElementById('claosweixin').style.display = 'none'
+        }
     }
 }
 </script>
@@ -66,4 +79,29 @@ export default {
     @import '../assets/css/bootstrap.css';
     @import '../assets/css/style.css';
     @import '../assets/css/fontawesome-all.min.css';
+    /* weixin 弹出框的样式处理 */
+    .white_content {
+        border-radius: 20px;
+        display: none;
+        position: absolute;
+        top: 30%;
+        left: 42%;
+        background-color: #FFFFFF;
+        z-index: 2001;
+        overflow: auto;
+    }
+    /* weixin 弹出框的样式处理 */
+    .black_overlay {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background-color: darkgray;
+        z-index: 2000;
+        -moz-opacity: 0.8;
+        opacity: .80;
+        filter: alpha(opacity=50);
+    }
 </style>
