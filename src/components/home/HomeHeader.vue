@@ -1,6 +1,6 @@
 <template>
     <!-- header -->
-    <div id="header">
+    <div id="header" class="header-section" :style="{height:fullHeight + 'px'}">
         <div class="banner-text-w3ls">
             <div class="container">
                 <div class="mx-auto text-left">
@@ -68,7 +68,24 @@
     </div>
     <!-- //header -->
 </template>
+<script>
+export default {
+    data: function () {
+        return {
+            fullHeight: document.documentElement.clientHeight > 768 ? document.documentElement.clientHeight : 768
+        }
+    },
+    created: function () {
+        // `this` 指向 vm 实例
+        // console.log('fullHeight: ' + this.fullWidth)
+        // console.log('document.documentElement.clientWidth = ' + document.documentElement.clientWidth)
+    }
+}
+</script>
 <style scoped>
+    .header-section{
+        min-width: 1000px;
+    }
     .site-header{
         color: #515a6e;
         font-size: 18px;

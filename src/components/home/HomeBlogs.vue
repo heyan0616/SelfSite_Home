@@ -1,6 +1,6 @@
 <template>
     <!-- blogs -->
-    <div id="blogs">
+    <div id="blogs" :style="{height:fullHeight + 'px'}">
         <div class="text-left">
             <h3 class="w3_head mb-5 head">个人博客</h3>
         </div>
@@ -49,6 +49,19 @@
     </div>
     <!-- //blogs -->
 </template>
+<script>
+export default {
+    data: function () {
+        return {
+            fullHeight: document.documentElement.clientHeight > 768 ? document.documentElement.clientHeight : 768
+        }
+    }
+    // created: function () {
+    //     // `this` 指向 vm 实例
+    //     console.log('fullHeight: ' + this.fullHeight)
+    // }
+}
+</script>
 <style scoped>
     .head{
         background: #54B689;
