@@ -85,7 +85,7 @@ export default {
         // weixin click事件处理
         showweixin: function (event) {
             document.getElementById('showweixin').style.display = 'block'
-            document.getElementById('claosweixin').style.display = 'block'
+            document.getElementById('closeweixin').style.display = 'block'
         }
     }
 }

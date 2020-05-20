@@ -10,7 +10,7 @@
             <div id="showweixin" class="white_content">
                 <img src='../assets/images/weixin.jpg' />
             </div>
-            <div id="claosweixin" class="black_overlay" v-on:click="closeweixin" />
+            <div id="closeweixin" class="black_overlay" v-on:click="closeweixin" />
 
             <!-- header -->
             <homeheader></homeheader>
@@ -70,7 +70,7 @@ export default {
     methods: {
         closeweixin: function () {
             document.getElementById('showweixin').style.display = 'none'
-            document.getElementById('claosweixin').style.display = 'none'
+            document.getElementById('closeweixin').style.display = 'none'
         }
     }
 }
