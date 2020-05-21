@@ -1,6 +1,6 @@
 <template>
     <!-- photos -->
-    <div id="photos">
+    <div id="photos" ref="heightref" :style="{height:fullHeight + 'px'}">
         <div class="text-left">
             <h3 class="w3_head mb-5 head">其他</h3>
         </div>
@@ -60,7 +60,9 @@
                 // 图片父容器高度
                 zmdHeight: 700,
                 // 浏览器宽度
-                screenWidth: 0
+                screenWidth: 0,
+                // the height of this component
+                fullHeight: null
             }
         },
         methods: {
@@ -78,6 +80,10 @@
                 this.screenWidth = window.innerWidth
                 this.setSize()
             }
+            // reset the height of this component
+            this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
+            // console.log('this.$refs.heightref.offsetHeight: ' + this.$refs.heightref.offsetHeight)
+            this.$forceUpdate()
         }
     }
 </script>

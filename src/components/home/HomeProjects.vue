@@ -1,6 +1,6 @@
 <template>
     <!-- projects -->
-    <div id="blogs" :style="{height:fullHeight + 'px', width:fullWidth + 'px'}">
+    <div id="projects" ref="heightref" :style="{height:fullHeight + 'px'}">
         <h3 class="w3_head mb-5 head">我的项目</h3>
         <div class="row service_w3top mt-5">
             <div class="col-lg-6">
@@ -40,13 +40,17 @@
 export default {
     data: function () {
         return {
-            fullHeight: document.documentElement.clientHeight > 768 ? document.documentElement.clientHeight : 768
+            fullHeight: null
         }
-    }
+    },
     // created: function () {
     //     // `this` 指向 vm 实例
-    //     console.log('fullHeight: ' + this.fullHeight)
-    // }
+    //     console.log('test: ' + document.documentElement.clientHeight)
+    // },
+    mounted: function () {
+        this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
+        this.$forceUpdate()
+    }
 }
 </script>
 <style scoped>
