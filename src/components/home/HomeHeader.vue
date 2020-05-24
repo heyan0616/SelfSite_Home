@@ -89,9 +89,9 @@ export default {
 }
 </script>
 <style scoped>
-    .header-section{
+    /* .header-section{
         min-width: 1000px;
-    }
+    } */
     .site-header{
         color: #515a6e;
         font-size: 18px;

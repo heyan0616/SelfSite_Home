@@ -4,7 +4,21 @@
         <h3 class="w3_head mb-5 head">我的项目</h3>
         <div class="row service_w3top mt-5">
             <div class="col-lg-6">
-                <!-- project 1-->
+                <!-- project Site Home-->
+                <div class="d-flex services-box">
+                    <div class="icon">
+                        <span class="fa fa-pencil"></span>
+                    </div>
+                    <div class="service-content">
+                        <h4><a class='new-a' href="https://github.com/heyan0616/SelfSite_Home">Site Home</a></h4>
+                        <p>
+                            本网站的source code<br>
+                            github链接
+                            <a class="desc-a" href="https://github.com/heyan0616/SelfSite_Home">project link</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- demo project-->
                 <div class="d-flex services-box">
                     <div class="icon">
                         <span class="fa fa-pencil"></span>
