@@ -75,16 +75,16 @@ export default {
             fullHeight: null
         }
     },
-    // created: function () {
-    //     // `this` 指向 vm 实例
-    //     console.log('test: ' + document.documentElement.clientHeight)
-    // },
     mounted: function () {
         this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
         // console.log('fullHeight: ' + this.fullHeight)
         // console.log('clientHeight: ' + document.documentElement.clientHeight)
-        // console.log('offsetHeight: ' + this.$refs.testref.offsetHeight)
+        // console.log('offsetHeight: ' + this.$refs.heightref.offsetHeight)
         this.$forceUpdate()
+        // window.addEventListener('resize', () => {
+        //     console.log('test')
+        //     // this.$forceUpdate()
+        // }, false)
     }
 }
 </script>
