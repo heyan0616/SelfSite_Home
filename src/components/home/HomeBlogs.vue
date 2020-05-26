@@ -5,6 +5,10 @@
             <h3 class="w3_head mb-5 head">个人博客</h3>
         </div>
         <div class="row news-grids">
+            <div class="sample-blog-header">
+            置顶文章
+            </div>
+            <!-- <el-divider class="divider"></el-divider> -->
             <!--latest blog1 -->
             <div class="col-lg-6 news-grids-left">
                 <div class="news_top">
@@ -12,7 +16,7 @@
                     <p class="newsp">
                         个人网站的搭建本身可以不需要什么技术，网上有很多可参考的模板，也有很多详细教程，
                         如果你只是想建个站，请阅读其他文章~ <br>
-                        本网站基于主流的前后端分离实践：前端基于Vue框架(Vue纯白，所以只是html模板上加了框子)；后端基于Springboot(后端工程师，这个都知道吧)；
+                        本网站基于主流的前后端分离实践：前端基于Vue框架(Vue纯白，所以只是html模板上加了框子)；后端基于Springboot(如果需要用到的话)；
                         然后为了能用markdown写技术文章，博客系统是单独分离出来的一个服务，基于Vuepress；路由、前端服务器都使用Nginx；
                         所有部署相关都基于Docker容器；操作系统是阿里云提供的centos；后端如果用到数据库，使用基于docker的Mongodb或Mysql
                         ... ...
@@ -20,12 +24,7 @@
                     </p>
                 </div>
             </div>
-            <el-divider class="divider"></el-divider>
-            <!-- <div>
-                <span>
-                    <div class="blog-date">By: Demo User</div>
-                </span>
-            </div> -->
+            <!-- <el-divider class="divider"></el-divider> -->
             <!--latest blog2 -->
             <div class="col-lg-6-1 news-grids-left">
                 <div class="news_top">
@@ -38,14 +37,14 @@
                     </p>
                 </div>
             </div>
-            <div>
-                <!-- <span>
-                    <div class="blog-date">#Date:   2019/11/16</div>
-                    <div class="blog-date">#By: Demo User</div>
-                </span> -->
-            </div>
+            <el-divider class="divider"></el-divider>
         </div>
-        <a class="btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://heyan.site:8001/" role="button"> > 查看更多博客内容 ... </a>
+        <div class="link-blog-header">
+        博客链接
+        </div>
+        <a class="btn_more btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://heyan.site:8001/" role="button"> 博客首页 </a>
+        <a class="btn_more btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://heyan.site:8001/index/" role="button"> 技术专题博客 </a>
+        <a class="btn_more btn btn-primary mt-lg-5 mt-3 agile-link-bnr" href="https://heyan.site:8003/" role="button">  其他博客 </a>
     </div>
     <!-- //blogs -->
 </template>
@@ -70,6 +69,46 @@ export default {
 }
 </script>
 <style scoped>
+    .sample-blog-header{
+        position: relative;
+        padding-left: 2.5rem;
+        color: #515a6e;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 400;
+    }
+    .sample-blog-header::before{
+        margin-left: 1rem;
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 100%;
+        background: #54B689;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .link-blog-header{
+        margin-top: 30px;
+        position: relative;
+        padding-left: 1.5rem;
+        color: #515a6e;
+        font-size: 18px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-weight: 400;
+    }
+    .link-blog-header::before{
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 100%;
+        background: #54B689;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
     .head{
         background: #54B689;
         color: white;
@@ -78,6 +117,7 @@ export default {
         text-align: center;
     }
     .new-a{
+        font-size: 0.8em;
         color: #515a6e;
     }
     .new-a:hover{
@@ -98,6 +138,12 @@ export default {
         padding: 2px;
     }
     .divider{
-        margin: 12px 20px 12px 15px;
+        background-color: #f2f2f2;
+        margin: 20px 12px 20px 12px;
+    }
+    .btn_more{
+        margin-top: 2rem !important;
+        margin-right: 3rem;
+        width: 200px;
     }
 </style>

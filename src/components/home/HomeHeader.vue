@@ -5,63 +5,71 @@
             <div class="container">
                 <div class="mx-auto text-left">
                     <h2>Yan Site</h2>
+                    <div class="about-section">
+                        <p class="site-header">
+                            关于网站
+                        </p>
+                        <p class="banp">
+                            let's go !
+                        </p>
+                    </div>
+                </div>
+                <el-divider class="divider"></el-divider>
+                <div class="module-section">
                     <p class="site-header">
-                        关于网站
+                        主要模块
                     </p>
-                    <p class="banp">
-                        let's go !
-                    </p>
-                </div>
-                <p class="site-header">
-                    主要模块
-                </p>
-                <div class="header-item-container">
-                    <li class="header-item-list">
-                        <div calss="header-item-main">
-                            <a href="#project">
-                                <img class="header-item-img" src="../../assets/images/about_project.png" alt="project">
-                                <div class="header-item-title">项目</div>
-                                <div class="header-item-info">个人项目，博客相关的代码，或者是发现的有意思的项目链接...</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="header-item-list">
-                        <div calss="header-item-main">
-                            <a href="#blog">
-                                <img class="header-item-img" src="../../assets/images/about_blog.png" alt="blog">
-                                <div class="header-item-title">博客</div>
-                                <div class="header-item-info">基于Vuepress的个人博客系统，分为技术专题和其他零散博客...</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="header-item-list">
-                        <div calss="header-item-main">
-                            <a href="#other">
-                                <img class="header-item-img" src="../../assets/images/about_other.png" alt="other">
-                                <div class="header-item-title">其他</div>
-                                <div class="header-item-info">内容和展现方式都还还不确定，先随便放了几张图片占位...</div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="header-item-list">
-                        <div calss="header-item-main">
-                            <a href="#contact">
-                                <img class="header-item-img" src="../../assets/images/about_contact.png" alt="contact">
-                                <div class="header-item-title">联系</div>
-                                <div class="header-item-info">if u want..</div>
-                            </a>
-                        </div>
-                    </li>
-                </div>
-                <div class="header-modules-desc">
-                    <p class="banp">
-                        <span class="header-span">项目</span> - 可能配合博客，整理学习中的相关代码；
-                        也可能会链接到一些有趣的项目；又或者是自己的小项目。<br />
-                        <span class="header-span">博客</span> - 以技术内容为主，会根据学习工作需要，转载各种自己觉的有用的知识内容
-                        （<span class="header-span-warn">此处涉及转载：一般会标明出处；有时会引用多处文章，可能会遗漏，请谅解并及时告知</span>）；
-                        当然也会有原创内容。<br />
-                        <span class="header-span">其他</span> - 没想好~
-                    </p>
+                    <div class="header-item-container">
+                        <li class="header-item-list">
+                            <div calss="header-item-main">
+                                <a href="#project">
+                                    <img class="header-item-img" src="../../assets/images/about_project.png" alt="project">
+                                    <div class="header-item-title">项目</div>
+                                    <div class="header-item-info">个人项目，博客相关的代码，或者是发现的有意思的项目链接...</div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header-item-list">
+                            <div calss="header-item-main">
+                                <a href="#blog">
+                                    <img class="header-item-img" src="../../assets/images/about_blog.png" alt="blog">
+                                    <div class="header-item-title">博客</div>
+                                    <div class="header-item-info">基于Vuepress的个人博客系统，分为技术专题和其他零散博客...</div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header-item-list">
+                            <div calss="header-item-main">
+                                <a href="#other">
+                                    <img class="header-item-img" src="../../assets/images/about_other.png" alt="other">
+                                    <div class="header-item-title">其他</div>
+                                    <div class="header-item-info">内容和展现方式都还还不确定，先随便放了几张图片占位...</div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header-item-list">
+                            <div calss="header-item-main">
+                                <a href="#contact">
+                                    <img class="header-item-img" src="../../assets/images/about_contact.png" alt="contact">
+                                    <div class="header-item-title">联系</div>
+                                    <div class="header-item-info">if u want..</div>
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="header-modules-desc">
+                        <p class="banp">
+                            <span class="header-span">项目</span> - 可能配合博客，整理学习中的相关代码；
+                            也可能会链接到一些有趣的项目；又或者是自己的小项目。<br />
+                            <span class="header-span">博客</span> - 使用markdown写博客，博客分为两大块：以技术专题为主的技术博客,
+                            和非专题的一般博客。<br>
+                            技术专题博客会根据学习工作需要，转载各种自己觉的有用的知识内容
+                            （<span class="header-span-warn">此处涉及转载：一般会标明出处；有时会引用多处文章，可能会遗漏，请谅解并及时告知</span>）
+                            ，当然也会有原创内容<br />
+                            一般博客就是普通的文章，可能是零散的技术文章、生活随笔，或者是转载的文章<br />
+                            <span class="header-span">其他</span> - 暂时没想好~
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -92,12 +100,32 @@ export default {
     /* .header-section{
         min-width: 1000px;
     } */
+    .about-section{
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    .module-section{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     .site-header{
+        position: relative;
+        padding-left: 1.5rem;
         color: #515a6e;
         font-size: 18px;
-        padding-top: 40px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         font-weight: 600;
+    }
+    .site-header::before{
+        content: "";
+        display: inline-block;
+        width: 5px;
+        height: 100%;
+        background: rgb(102, 177, 255);
+        position: absolute;
+        left: 0;
+        top: 0;
     }
     .header-span{
         color: #2b85e4;
@@ -105,6 +133,7 @@ export default {
         font-size: 13px;
     }
     .header-span-warn{
+        font-size: 12px;
         color: #F56C6C;
     }
     .header-item-container{
@@ -113,6 +142,12 @@ export default {
     .header-modules-desc{
         clear:both;
         padding-top: 20px;
+    }
+    .about-section .banp{
+        padding-top: 20px;
+    }
+    .module-section .banp{
+        padding-top: 10px;
     }
     .header-modules-desc .banp{
         font-size: 13px;
@@ -186,5 +221,9 @@ export default {
     .header-item-list:hover .header-item-info{
         color: #fff;
         transform: translateY(-3px);
+    }
+    .divider{
+        margin: 20px 0px 20px 0px;
+        background-color: #f2f2f2;
     }
 </style>

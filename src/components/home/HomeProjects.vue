@@ -12,8 +12,8 @@
                     <div class="service-content">
                         <h4><a class='new-a' href="https://github.com/heyan0616/SelfSite_Home">Site Home</a></h4>
                         <p>
-                            本网站的source code<br>
-                            github链接
+                            本网站的source code | 以及博客的source<br>
+                            Github链接
                             <a class="desc-a" href="https://github.com/heyan0616/SelfSite_Home">project link</a>
                         </p>
                     </div>
