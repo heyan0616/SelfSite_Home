@@ -1,17 +1,29 @@
 <template>
     <!-- header -->
-    <div id="header" ref="heightref" class="header-section" :style="{height:fullHeight + 'px'}">
+    <div id="header" ref="heightref" :style="{height:fullHeight + 'px'}">
         <div class="banner-text-w3ls">
             <div class="container">
-                <div class="mx-auto text-left">
-                    <h2>Yan Site</h2>
-                    <div class="about-section">
-                        <p class="site-header">
-                            关于网站
-                        </p>
-                        <p class="banp">
-                            let's go !
-                        </p>
+                <div>
+                    <div class="header-section">
+                        <h2>Yan Site</h2>
+                        <div class="about-section">
+                            <p class="site-header">
+                                关于网站
+                            </p>
+                            <p class="banp">
+                                Welcome and let's go !                               
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class="test">
+                        <iframe src="http://wufazhuce.com/one/2832" width="854" height="180" frameborder="0" scrolling="no"
+                        ></iframe>
+                    </div> -->
+                    <div style="width:854px; height:180px; overflow:hidden; border:0px">
+                        <div style="width:854px; height:1000px;margin:-679px 10px 0px 0px;">
+                            <iframe v-bind:src="searchUrl" width="854" height="1000" frameborder="0" scrolling="no"
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
                 <el-divider class="divider"></el-divider>
@@ -80,11 +92,20 @@
 export default {
     data: function () {
         return {
-            fullHeight: null
+            fullHeight: null,
+            searchUrl: null
         }
     },
     mounted: function () {
         this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
+        var now = new Date()
+        // 2020/05/28 is the date i found this url and 2832 is the coressponding number - that is why set base as this
+        var baseDate = new Date("2020/05/28")
+        var baseCount = 2832
+        // console.log("fff = " + (parseInt(Math.abs(now.getTime()- baseDate.getTime()) /1000/60/60/24)))
+        var dayOffset = (parseInt(Math.abs(now.getTime()- baseDate.getTime()) /1000/60/60/24))
+        var urlCount = baseCount + dayOffset
+        this.searchUrl = "http://wufazhuce.com/one/" + urlCount
         // console.log('fullHeight: ' + this.fullHeight)
         // console.log('clientHeight: ' + document.documentElement.clientHeight)
         // console.log('offsetHeight: ' + this.$refs.heightref.offsetHeight)
@@ -97,8 +118,19 @@ export default {
 }
 </script>
 <style scoped>
-    /* .header-section{
-        min-width: 1000px;
+    .header-section{
+        float : left;
+        width: 30%;
+    }
+    .banner-text-w3ls h2{
+        color: #01aef0;
+        font-size: 2em;
+        letter-spacing: 1px;
+        font-weight: 600;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    }
+    /* .header-up{
+        height: 200px;
     } */
     .about-section{
         padding-top: 30px;
@@ -122,13 +154,13 @@ export default {
         display: inline-block;
         width: 5px;
         height: 100%;
-        background: rgb(102, 177, 255);
+        background: #01aef0;
         position: absolute;
         left: 0;
         top: 0;
     }
     .header-span{
-        color: #2b85e4;
+        color: #01aef0;
         font-weight: 400;
         font-size: 13px;
     }
@@ -223,7 +255,7 @@ export default {
         transform: translateY(-3px);
     }
     .divider{
-        margin: 20px 0px 20px 0px;
+        margin: 30px 0px 20px 0px;
         background-color: #f2f2f2;
     }
 </style>
