@@ -19,9 +19,9 @@
                         <iframe src="http://wufazhuce.com/one/2832" width="854" height="180" frameborder="0" scrolling="no"
                         ></iframe>
                     </div> -->
-                    <div style="width:854px; height:180px; overflow:hidden; border:0px">
-                        <div style="width:854px; height:1000px;margin:-679px 10px 0px 0px;">
-                            <iframe v-bind:src="searchUrl" width="854" height="1000" frameborder="0" scrolling="no"
+                    <div style="width:800px; height:180px; overflow:hidden; border:0px">
+                        <div style="width:800px; height:1000px;margin:-679px 10px 0px 0px;">
+                            <iframe v-bind:src="searchUrl" width="800" height="1000" frameborder="0" scrolling="no"
                             ></iframe>
                         </div>
                     </div>
