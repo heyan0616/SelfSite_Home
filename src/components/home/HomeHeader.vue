@@ -19,8 +19,8 @@
                         <iframe src="http://wufazhuce.com/one/2832" width="854" height="180" frameborder="0" scrolling="no"
                         ></iframe>
                     </div> -->
-                    <div style="width:760px; height:180px; overflow:hidden; border:0px;">
-                        <div style="width:760px; height:1000px;margin:-679px 0px 0px 0px;">
+                    <div id="fream-section" class="ifream-section">
+                        <div style="width:760px; height:1000px;margin:-679px -20px 0px 0px;">
                             <iframe v-bind:src="searchUrl" width="770" height="900" frameborder="0" scrolling="no"
                             ></iframe>
                         </div>
@@ -118,10 +118,27 @@ export default {
 }
 </script>
 <style scoped>
+    .ifream-section{
+         width: 760px; 
+         height: 180px; 
+         overflow: hidden; 
+         border: 0px;
+    }
+    @media only screen and (max-width:1180px){
+        .ifream-section{
+            display: none !important;
+        }
+    }
     .header-section{
         float : left;
         width: 35%;
         padding-bottom: 10px;
+    }
+    @media only screen and (max-width:1180px){
+        .header-section{
+            width: 100%;
+            float: none;
+        }
     }
     .banner-text-w3ls h2{
         color: #01aef0;
