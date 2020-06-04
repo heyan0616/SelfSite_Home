@@ -19,12 +19,12 @@
                         <iframe src="http://wufazhuce.com/one/2832" width="854" height="180" frameborder="0" scrolling="no"
                         ></iframe>
                     </div> -->
-                    <div id="fream-section" class="ifream-section">
+                    <!-- <div id="fream-section" class="ifream-section">
                         <div style="width:760px; height:1000px;margin:-679px -20px 0px 0px;">
                             <iframe v-bind:src="searchUrl" width="770" height="900" frameborder="0" scrolling="no"
                             ></iframe>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <el-divider class="divider"></el-divider>
                 <div class="module-section">
@@ -98,14 +98,20 @@ export default {
     },
     mounted: function () {
         this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
-        var now = new Date()
-        // 2020/05/28 is the date i found this url and 2832 is the coressponding number - that is why set base as this
-        var baseDate = new Date("2020/05/28")
-        var baseCount = 2832
-        // console.log("fff = " + (parseInt(Math.abs(now.getTime()- baseDate.getTime()) /1000/60/60/24)))
-        var dayOffset = (parseInt(Math.abs(now.getTime()- baseDate.getTime()) /1000/60/60/24))
-        var urlCount = baseCount + dayOffset
-        this.searchUrl = "http://wufazhuce.com/one/" + urlCount
+
+
+
+        // var now = new Date()
+        // // 2020/05/28 is the date i found this url and 2832 is the coressponding number - that is why set base as this
+        // var baseDate = new Date("2020/05/28")
+        // var baseCount = 2832
+        // // console.log("fff = " + (parseInt(Math.abs(now.getTime()- baseDate.getTime()) /1000/60/60/24)))
+        // var dayOffset = (parseInt(Math.abs(now.getTime()- baseDate.getTime()) /1000/60/60/24))
+        // var urlCount = baseCount + dayOffset
+        // this.searchUrl = "http://wufazhuce.com/one/" + urlCount
+
+
+
         // console.log('fullHeight: ' + this.fullHeight)
         // console.log('clientHeight: ' + document.documentElement.clientHeight)
         // console.log('offsetHeight: ' + this.$refs.heightref.offsetHeight)
@@ -130,7 +136,7 @@ export default {
         }
     }
     .header-section{
-        float : left;
+        /* float : left; */
         width: 35%;
         padding-bottom: 10px;
     }
