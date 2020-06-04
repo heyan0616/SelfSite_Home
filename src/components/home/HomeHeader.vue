@@ -3,7 +3,7 @@
     <div id="header" ref="heightref" :style="{height:fullHeight + 'px'}">
         <div class="banner-text-w3ls">
             <div class="container">
-                <div>
+                <div class="header-main">
                     <div class="header-section">
                         <h2>Yan Site</h2>
                         <div class="about-section">
@@ -12,6 +12,20 @@
                             </p>
                             <p class="banp">
                                 Welcome and let's go !                               
+                            </p>
+                        </div>
+                    </div>
+                    <div class="header-right-section">
+                        <div class="header-right-section-text">
+                            人生是一座医院，每个病人都渴望着调换床位。这一位愿意面对着火炉呻吟，那一位认为在窗边会治好他的病。
+                        </div>
+                         <div class="header-right-section-date">
+                            <p style="font-size: 56px; font-weight: 600; height: 56px;
+                                    line-height: 56px;margin: 0;text-align: center; color: #01aef0;">
+                                    1
+                            </p>
+                            <p style="argin: 0;font-size: 14px; text-align: center; color: #01aef0;">
+                                Jan 1900
                             </p>
                         </div>
                     </div>
@@ -64,7 +78,16 @@
                                 <a href="#contact">
                                     <img class="header-item-img" src="../../assets/images/about_contact.png" alt="contact">
                                     <div class="header-item-title">联系</div>
-                                    <div class="header-item-info">if u want..</div>
+                                    <div class="header-item-info"></div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="header-item-list">
+                            <div calss="header-item-main">
+                                <a href="#header">
+                                    <img class="header-item-img" src="../../assets/images/about_comments.png" alt="contact">
+                                    <div class="header-item-title">Comments</div>
+                                    <div class="header-item-info"></div>
                                 </a>
                             </div>
                         </li>
@@ -73,12 +96,16 @@
                         <p class="banp">
                             <span class="header-span">项目</span> - 可能配合博客，整理学习中的相关代码；
                             也可能会链接到一些有趣的项目；又或者是自己的小项目。<br />
+                        </p>
+                        <p class="banp">
                             <span class="header-span">博客</span> - 使用markdown写博客，博客分为两大块：以技术专题为主的技术博客,
-                            和非专题的一般博客。<br>
+                            和非专题的一般博客。<br />
                             技术专题博客会根据学习工作需要，转载各种自己觉的有用的知识内容
                             （<span class="header-span-warn">此处涉及转载：一般会标明出处；有时会引用多处文章，可能会遗漏，请谅解并及时告知</span>）
                             ，当然也会有原创内容<br />
                             一般博客就是普通的文章，可能是零散的技术文章、生活随笔，或者是转载的文章<br />
+                        </p>
+                        <p class="banp">
                             <span class="header-span">其他</span> - 暂时没想好~
                         </p>
                     </div>
@@ -130,20 +157,78 @@ export default {
          overflow: hidden; 
          border: 0px;
     }
+    .header-main{
+        height: 200px;
+        overflow: hidden;
+    }
+    @media only screen and (max-width:1600px){
+        .header-main{
+            height: 380px;
+        }
+    }
+    @media only screen and (max-width:1070px){
+        .header-main{
+            height: 430px;
+        }
+    }
     @media only screen and (max-width:1180px){
         .ifream-section{
             display: none !important;
         }
-    }
+    }  
     .header-section{
-        /* float : left; */
-        width: 35%;
+        float: left;
+        width: 450px;
         padding-bottom: 10px;
     }
     @media only screen and (max-width:1180px){
         .header-section{
             width: 100%;
             float: none;
+        }
+    }
+    .header-right-section{
+        width: 680px; 
+        height: 170px; 
+        float: left; 
+        background: #fafafa; 
+        display: table;
+        margin-right: 5%;
+    }
+    .header-right-section-text{
+        width: 560px; 
+        text-align: left; 
+        vertical-align: middle;
+        display: table-cell; 
+        font-size: 14px; 
+        color: #808695;
+        padding: 5px 5%; 
+        line-height: 1.67;
+    }
+    .header-right-section-date{
+        width: 120px; 
+        float: left; 
+        padding: 50px 0;
+    }
+    @media only screen and (max-width:1070px){
+        .header-right-section{
+            height: 250px;
+            width: 100%;
+            display: block;
+        }
+    }
+    @media only screen and (max-width:1070px){
+        .header-right-section-text{
+            width: 100%;
+            display: block;
+            padding: 5%;
+        }
+    }
+    @media only screen and (max-width:1070px){
+        .header-right-section-date{
+            width: 100%;
+            display: block;
+            padding: 10px 0;
         }
     }
     .banner-text-w3ls h2{
@@ -190,7 +275,7 @@ export default {
     }
     .header-span-warn{
         font-size: 12px;
-        color: #F56C6C;
+        color: #ffc4c4;
     }
     .header-item-container{
         height: 250px;
@@ -212,8 +297,8 @@ export default {
         width: 197px;
         position: relative;
         padding: 25px 7px 15px 7px;
-        background: #f9f9f9;
-        margin: 30px 30px 0 0;
+        background: #f1fbff;
+        margin: 30px 35px 0 0;
         list-style: none;
         float: left;
     }
