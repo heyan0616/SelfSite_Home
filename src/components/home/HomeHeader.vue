@@ -17,15 +17,15 @@
                     </div>
                     <div class="header-right-section">
                         <div class="header-right-section-text">
-                            人生是一座医院，每个病人都渴望着调换床位。这一位愿意面对着火炉呻吟，那一位认为在窗边会治好他的病。
+                            {{htmlInfo}}
                         </div>
                          <div class="header-right-section-date">
                             <p style="font-size: 56px; font-weight: 600; height: 56px;
                                     line-height: 56px;margin: 0;text-align: center; color: #01aef0;">
-                                    1
+                                    {{cday}}
                             </p>
                             <p style="argin: 0;font-size: 14px; text-align: center; color: #01aef0;">
-                                Jan 1900
+                                {{cmonth}} {{cyear}}
                             </p>
                         </div>
                     </div>
@@ -120,13 +120,29 @@ export default {
     data: function () {
         return {
             fullHeight: null,
-            searchUrl: null
+            // searchUrl: null,
+            htmlInfo: "愿你有追求卓越的能力和韧劲，更有接受平凡的智慧和勇气",
+            cyear: 1900,
+            cmonth: 1,
+            cday: 1
         }
     },
     mounted: function () {
         this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
 
-
+        // call api to get the one text 
+        this.$axios
+        .get('http://api.youngam.cn/api/one.php')
+        .then(response => (this.htmlInfo = response.data.data[0].text))
+        .catch(function (error) { // 请求失败处理
+            console.log(error);
+        });
+        // get the date format
+        var now = new Date()
+        this.cyear = now.getFullYear() //获取完整的年份(4位)
+        // var cmonth = now.getMonth() //获取当前月份(0-11,0代表1月)
+        this.cmonth = now.toDateString().split(" ")[1]   // 英文month
+        this.cday= now.getDate() //获取当前日(1-31)
 
         // var now = new Date()
         // // 2020/05/28 is the date i found this url and 2832 is the coressponding number - that is why set base as this
@@ -137,16 +153,12 @@ export default {
         // var urlCount = baseCount + dayOffset
         // this.searchUrl = "http://wufazhuce.com/one/" + urlCount
 
-
-
         // console.log('fullHeight: ' + this.fullHeight)
         // console.log('clientHeight: ' + document.documentElement.clientHeight)
         // console.log('offsetHeight: ' + this.$refs.heightref.offsetHeight)
+
         this.$forceUpdate()
-        // window.addEventListener('resize', () => {
-        //     console.log('test')
-        //     // this.$forceUpdate()
-        // }, false)
+
     }
 }
 </script>
