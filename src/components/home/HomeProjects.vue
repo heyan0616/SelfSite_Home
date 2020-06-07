@@ -57,10 +57,6 @@ export default {
             fullHeight: null
         }
     },
-    // created: function () {
-    //     // `this` 指向 vm 实例
-    //     console.log('test: ' + document.documentElement.clientHeight)
-    // },
     mounted: function () {
         this.fullHeight = document.documentElement.clientHeight > (this.$refs.heightref.offsetHeight + 100) ? document.documentElement.clientHeight : (this.$refs.heightref.offsetHeight + 100)
         this.$forceUpdate()
