@@ -10,5 +10,5 @@ sshpass -p "Heyan0616" ssh root@heyan.site "rm -rf /home/nginx_homepage/html/*"
 echo "clean the remote server html folder complete"
 sshpass -p "Heyan0616" scp -r /Users/heyan/self/workspace/vue_workspace/vue-home/dist/* root@heyan.site:/home/nginx_homepage/html
 echo "start copy downloads folder in remote server"
-sshpass -p "Heyan0616" ssh root@heyan.site "cp -r /home/nginx_homepage/downloads/ /home/nginx_homepage/html/"
+sshpass -p "Heyan0616" ssh root@heyan.site "cp -r /home/nginx_homepage/download/ /home/nginx_homepage/html/"
 echo "scp files to server complete"
