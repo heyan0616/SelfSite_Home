@@ -16,8 +16,8 @@
                         </div>
                     </div>
                     <div class="header-right-section">
-                        <div class="header-right-section-text">
-                            {{htmlInfo}}
+                        <div class="header-right-section-text" v-html="htmlInfo">
+                            <!-- {{htmlInfo}} -->
                         </div>
                          <div class="header-right-section-date">
                             <p style="font-size: 56px; font-weight: 600; height: 56px;
@@ -46,7 +46,7 @@
                         主要模块
                     </p>
                     <div class="header-item-container">
-                        <li class="header-item-list">
+                        <li class="header-item-list-first">
                             <div calss="header-item-main">
                                 <a href="#project">
                                     <img class="header-item-img" src="../../assets/images/about_project.png" alt="project">
@@ -82,7 +82,7 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="header-item-list">
+                        <li class="header-item-list-last">
                             <div calss="header-item-main">
                                 <a href="#header">
                                     <img class="header-item-img" src="../../assets/images/about_comments.png" alt="contact">
@@ -121,7 +121,7 @@ export default {
         return {
             fullHeight: null,
             // searchUrl: null,
-            htmlInfo: "愿你有追求卓越的能力和韧劲，更有接受平凡的智慧和勇气",
+            htmlInfo: "每日一语:「请使用http访问网站」",
             cyear: 1900,
             cmonth: 1,
             cday: 1
@@ -190,7 +190,7 @@ export default {
     }  
     .header-section{
         float: left;
-        width: 450px;
+        width: 493px;
         padding-bottom: 10px;
     }
     @media only screen and (max-width:1180px){
@@ -200,12 +200,11 @@ export default {
         }
     }
     .header-right-section{
-        width: 680px; 
+        width: 700px; 
         height: 170px; 
         float: left; 
         background: #fafafa; 
         display: table;
-        margin-right: 5%;
     }
     .header-right-section-text{
         width: 560px; 
@@ -305,12 +304,30 @@ export default {
     .header-modules-desc .banp{
         font-size: 13px;
     }
+    .header-item-list-first{
+        width: 197px;
+        position: relative;
+        padding: 25px 7px 15px 7px;
+        background: #f1fbff;
+        margin: 30px 28px 0 0;
+        list-style: none;
+        float: left;
+    }
     .header-item-list{
         width: 197px;
         position: relative;
         padding: 25px 7px 15px 7px;
         background: #f1fbff;
-        margin: 30px 35px 0 0;
+        margin: 30px 28px 0 20px;
+        list-style: none;
+        float: left;
+    }
+    .header-item-list-last{
+        width: 197px;
+        position: relative;
+        padding: 25px 7px 15px 7px;
+        background: #f1fbff;
+        margin: 30px 0px 0 28px;
         list-style: none;
         float: left;
     }

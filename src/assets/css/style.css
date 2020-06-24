@@ -438,7 +438,7 @@ header {
     padding: 1.5em 1.1em 0;
 }
 .banner-text-w3ls {
-    padding: 4em 4em 4em 4em;
+    padding: 4em 6em 4em 6em;
 }
 .banner-text-w3ls h2 {
     color: #17233d;
@@ -473,7 +473,7 @@ p.newsp {
     text-decoration:underline;
 }
 .news {
-    padding: 2em 4em;
+    padding: 2em 6em;
     background: #ffffff;
     border-top: solid 2px #efefef;
 }
@@ -529,7 +529,7 @@ section.slide-wrapper-1 {
 	box-shadow: 0 0.05em 0.15em 0 rgba(0, 0, 0, 0.17);
 }
 .news_top {
-    padding-right: 5em;
+    /* padding-right: 5em; */
 }
 p.iner {
     font-size: 1.3em;
@@ -543,7 +543,7 @@ p.iner {
     border-radius: 5px;
 }
 .wedo {
-    padding: 4em 4em;
+    padding: 4em 6em;
     background: #ffffff;
     text-align: left;
     border-top: solid 2px #efefef;
