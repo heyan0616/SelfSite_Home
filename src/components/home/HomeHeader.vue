@@ -190,7 +190,8 @@ export default {
     }  
     .header-section{
         float: left;
-        width: 493px;
+        /* width: 493px; */
+        width: 40%;
         padding-bottom: 10px;
     }
     @media only screen and (max-width:1180px){
@@ -200,14 +201,16 @@ export default {
         }
     }
     .header-right-section{
-        width: 700px; 
+        /* width: 700px;  */
+        width: 60%;
         height: 170px; 
         float: left; 
         background: #fafafa; 
         display: table;
     }
     .header-right-section-text{
-        width: 560px; 
+        /* width: 560px;  */
+        width: 78%; 
         text-align: left; 
         vertical-align: middle;
         display: table-cell; 
@@ -217,7 +220,8 @@ export default {
         line-height: 1.67;
     }
     .header-right-section-date{
-        width: 120px; 
+        /* width: 120px;  */
+        width: 100%;
         float: left; 
         padding: 50px 0;
     }
